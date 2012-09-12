@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+
+	<body id="blog">
+		
+		<div id="header">
+			<h1 class="color-of-the-day">200 to Texas</h1>
+			
+			<nav id="main-nav">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li class="color-of-the-day">|</li>
+					<li><a href="/archive.html">Archive</a></li>
+					<li class="color-of-the-day">|</li>
+					<li><a href="http://texas.seanday.me/about/">The Project</a></li>
+					<li class="color-of-the-day">|</li>
+					<li><a href="http://texas.seanday.me/sean/">About Sean</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+		{{content}}
+		
+		<footer>			
+			{% include social.html %}
+		</footer>
+		
+	</body>
+</html>

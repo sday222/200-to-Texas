@@ -1,0 +1,6 @@
+site_name: '200 to Texas'
+markdown: rdiscount
+rdiscount:
+    extensions: [smart]
+permalink: /:title
+paginate: 1

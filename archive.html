@@ -1,0 +1,13 @@
+---
+layout: archive
+title: The Big Ol' Archive
+---
+
+<section class="archive">
+	<h2>{{page.title}}</h2>
+	<ul>
+		{% for post in site.posts %}
+		<li><span class="post-date">{{post.date | date: "%B %d, %Y"}}</span> | <span class="post-title"><a href="{{post.url}}">{{post.title}}</a></span></li>
+		{% endfor %}
+	</ul>
+</section>

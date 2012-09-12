@@ -1,89 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		
-		<title>200 to Texas</title>
-		<meta name="description" content="200 to Texas is a daily personal design challege that explores icons of Texas.">
-		<meta name="keywords" content="sean day, austin texas, tejas, denver colorado, web design, illustration, icons">
-		
-		<!-- let's share stuff -->
-		<meta property="og:site_name" content="200 to Texas">
-		<meta property="og:url" content="http://texas.seanday.me">
-		<meta property="og:title" content="200 to Texas">
-		<meta property="og:image" content="#">
-		<meta property="og:description" content="200 to Texas is a daily personal design challege that explores icons of Texas.">
-		<meta property="og:type" content="website">
-		<meta property="og:locale" content="en_US">
-		
-		<!-- let's make it fit -->
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		
-		<!-- let's make it pretty -->
-		<link rel="stylesheet" href="./assets/css/main.css">
-		
-		<!-- let's add some other goodies -->
-		<link rel="shortcut icon" type="image/x-icon" href="#">
-		
-	</head>
+---
+layout: default
+---
 
-	<body id="blog">
-		
-		<div id="header">
-			<h1 class="color-of-the-day">200 To Texas</h1>
-			
-			<nav id="main-nav">
-				<ul>
-					<li><a href="http://texas.seanday.me">Blog</a></li>
-					<li class="color-of-the-day">|</li>
-					<li><a href="http://texas.seanday.me/about/">The Project</a></li>
-					<li class="color-of-the-day">|</li>
-					<li><a href="http://texas.seanday.me/sean/">About Sean</a></li>
-				</ul>
-			</nav>
-		</div>
-		
+		{% for post in paginator.posts %}
 		<section class="post">
-			<img src="./assets/img/200.jpg" alt="200 Days to Go">
-			<h2 class="color-of-the-day">This is the Post Title</h2>
-			<p>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-			<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-			<p><a href="#" class="more">More...</a></p>
+			<a href="{{post.url}}"><img src="{{post.image}}" alt="{{post.title}}"></a>
+			<h2 class="color-of-the-day"><a href="{{post.url}}">{{post.title}}</a></h2>
+			{{post.content}}
 		</section>
-		
-		<section class="post">
-			<img src="./assets/img/200.jpg" alt="200 Days to Go">
-			<h2 class="color-of-the-day">This is the Post Title</h2>
-			<p>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-			<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-			<p><a href="#" class="more">More...</a></p>
-		</section>
-		
-		<section class="post">
-			<img src="./assets/img/200.jpg" alt="200 Days to Go">
-			<h2 class="color-of-the-day">This is the Post Title</h2>
-			<p>Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-			<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-			<p><a href="#" class="more">More...</a></p>
-		</section>
-		
-		<footer>
-			<nav id="footer-nav">
-				<ul>
-					<li><a href="#">« Previous</a></li>
-					<li><a href="#">Next »</a></li>
-				</ul>
-			</nav>
-			
-			<div class="social">
-				<ul>
-					<li><a href="http://twitter.com/sean_day/">Twitter</a></li>
-					<li><a href="http://dribbble.com/seanmday">Dribbble</a></li>
-					<li><a href="#">Instagram</a></li>
-					<li><a href="http://www.rdio.com/people/sean_day/">Rdio</a></li>
-				</ul>
-			</div>
-		</footer>
-		
-	</body>
-</html>
+		{% endfor %}

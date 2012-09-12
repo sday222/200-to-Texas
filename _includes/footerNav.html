@@ -1,0 +1,16 @@
+			<nav id="footer-nav">
+				<ul>
+					{% if paginator.next_page %}
+					<li><a href="/page{{paginator.next_page}}">« Previous</a></li>
+					{% endif %}
+					{% if paginator.previous_page %}				
+					<li>
+						{% if paginator.previous_page == 1 %}
+						<a href="/">Next »</a>
+						{% else %}
+						<a href="/page{{paginator.previous_page}}">Next »</a>
+						{% endif %}
+					</li>
+					{% endif %}
+				</ul>
+			</nav>
